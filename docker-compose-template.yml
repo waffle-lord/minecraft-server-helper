@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    <name>:
+        stdin_open: true
+        tty: true
+        ports:
+            - '<port>:<port>'
+        volumes:
+            - './server-files:/serv'
+        image: <name>
+        container_name: <name>

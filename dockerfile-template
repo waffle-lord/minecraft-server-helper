@@ -1,0 +1,7 @@
+FROM openjdk:<openjdk_tag>
+
+RUN mkdir /serv
+
+WORKDIR /serv
+
+CMD ./start.sh
