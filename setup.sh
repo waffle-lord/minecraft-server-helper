@@ -30,6 +30,11 @@ if ! command -v docker-compose &> /dev/null; then
     exit
 fi
 
+## dos2unix ##
+if ! command -v dos2unix &> /dev/null; then
+    echo "dos2unix command not found, please install it. Aborting"
+fi
+
 echo "Enter server zip file location"
 read serverFilesZip
 echo ''
@@ -131,6 +136,9 @@ mv -v "$composeFile" "docker-compose.yml"
 
 # make sure start.sh is executable
 chmod +x "$serverFiles/start.sh"
+
+# make sure start.sh has unix line endings
+dos2unix "$serverFiles/start.sh"
 
 # run docker build
 echo ''
