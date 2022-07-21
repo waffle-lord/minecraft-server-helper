@@ -13,7 +13,7 @@ This is a quick docker/docker-compose setup for running minecraft servers on lin
 # Setup
 - Get the server files of your liking
 - Create a `start.sh` file in your server files with the start command for the server. This will be used by docker to start the container
-- Zip up the server files so they extract directly out of the archive, not into a subfolder. (select all files and zip. Don't select to parent folder)
+- Zip up the server files so they extract directly out of the archive, not into a subfolder. (select all files and zip. Don't select the parent folder)
 - download this helper tool from releases and extract it. Rename the folder as desired.
 - Run `setup.sh` and provide the following when prompted
   - Server zip you created
