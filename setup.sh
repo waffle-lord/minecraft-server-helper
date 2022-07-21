@@ -33,6 +33,7 @@ fi
 ## dos2unix ##
 if ! command -v dos2unix &> /dev/null; then
     echo "dos2unix command not found, please install it. Aborting"
+    exit
 fi
 
 echo "Enter server zip file location"
